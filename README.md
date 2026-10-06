@@ -15,3 +15,9 @@ You can then copy the data from the foreign tables into PostgreSQL.
 
 ## Installation
 Run `docker compose up -d`
+
+## Usage
+```
+docker exec -it mssql-mssqlserver-2019-1 /opt/mssql-tools18/bin/sqlcmd -No -S localhost -U sa -P "Cybertec1"
+docker exec -it mssql-postgres18-mssql-1 psql -h localhost -U mssql sqlserver
+```
